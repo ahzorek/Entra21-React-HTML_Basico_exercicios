@@ -92,10 +92,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-.music-list li summary::marker {
+/* .music-list li summary::marker {
   content: '';
   color: red;
-}
+} */
 
 .music-list li h3{
   display: inline;
