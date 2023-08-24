@@ -135,7 +135,13 @@ h1 {
   transform: scale(.95);
 }
 .love {
+  color: rgb(225, 46, 115);
+  background-color: rgb(40 40 40);
+}
+
+.love:active{
   background-color: rgb(225, 46, 115);
+  color: rgb(20 20 20 / .5);
 }
 .download {
   background-color: rgb(0, 160, 64);
