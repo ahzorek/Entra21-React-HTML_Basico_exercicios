@@ -31,3 +31,11 @@ Este repositório contém:
 - Exercitar as boas práticas de documentação, organização e indentação do código; 
 - Dar os primeiros passos com CSS; 
   [LIVE DEMO](https://genuine-kataifi-02a2c4.netlify.app/)
+
+## Exercício 4
+### Objetivos
+- Página que fale sobre formas de diminuir emissões de carbono 
+- Praticar os diversos seletores CSS; 
+- Reforçar a conexão entre elementos HTML e CSS;  
+- Exercitar as boas práticas de documentação, organização e indentação do código; 
+  [LIVE DEMO](https://magenta-beijinho-761bfc.netlify.app)

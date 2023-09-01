@@ -1,0 +1,266 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+
+/* Variaveis e root */
+:root {
+  --text: rgb(13, 33, 24);
+  --background: rgb(226, 253, 242);
+  --primary: rgb(98, 210, 162);
+  --secondary: rgb(187, 242, 220);
+  --accent: rgb(37, 187, 127);
+  --bg: rgb(219 227 240 / .25);
+  --padding-padrao: clamp(2rem, 10vw, 20rem);
+  --bg-pattern-size: 6px;
+  scroll-behavior: smooth;
+}
+
+/* Estilos gerais */
+::selection{
+  color: var(--background);
+  background-color: var(--text);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background);
+  background-image: radial-gradient(circle, var(--bg), var(--bg) 1px, transparent 1px);
+  background-size: var(--bg-pattern-size) var(--bg-pattern-size);
+  background-attachment: fixed;
+  color: var(--text);
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  padding-inline: var(--padding-padrao);
+}
+
+.logo {
+  background-color: var(--primary);
+  height: 200px;
+  vertical-align: bottom;
+  display: flex;
+  align-items: end;
+  padding: 15px;
+  transition: all 133ms ease-in-out;
+}
+
+.logo:hover {
+  background-color: var(--accent);
+}
+
+.logo img {
+  width: 200px;
+  mix-blend-mode: color-dodge;
+}
+
+/* Estilos da navegação */
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: var(--text);
+  text-transform: uppercase;
+  font-size: .825rem;
+  letter-spacing: .04rem;
+  font-weight: 600;
+}
+
+nav ul li:last-child > a {
+  background-color: var(--secondary);
+  padding: 10px 15px;
+  border-radius: .25rem;
+  color: var(--accent);
+  transition: all 133ms ease-in-out;
+}
+
+nav ul li:last-child:hover > a {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
+/* estilos do artigo */
+
+.author {
+  max-width: 100vw;
+  margin-inline: var(--padding-padrao);
+  margin-bottom: 2rem;
+}
+.author a {
+  font-weight: 800;
+}
+.avatar {
+  display: inline-block;  
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.avatar img {
+  width: 50px;
+  height: 50px;
+  transition: all 333ms ease-in-out;
+  transform: scale(1.125);
+  filter: grayscale(.5);
+}
+
+.avatar:hover img {
+  transform: scale(1);
+  filter: grayscale(0);
+}
+
+h1::before {
+  position: absolute;
+  left: 0;
+  content: '';
+  height: 100%;
+  width: 50px;
+  background-color: var(--primary);
+}
+
+h1 {
+  position: relative;
+  font-size: clamp(2rem, 22vw, 4.2rem);
+  max-width: 22ch;    
+  padding-inline: var(--padding-padrao);
+}
+
+figure{
+  margin: 0;
+  padding-inline: var(--padding-padrao);
+}
+
+figure img {
+  width: 100%;
+  aspect-ratio: 18/9;
+  object-fit: cover;
+  /* box-shadow: var(--accent) 5px -5px 0; */
+}
+figcaption {
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+figcaption a {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-block: 2rem;
+
+}
+
+/* texto do artigo */
+
+h2, p {
+  padding-inline: var(--padding-padrao);
+  margin: 1.2rem auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+blockquote::before{
+  position: absolute;
+  content: '“';
+  top: 0;
+  left: 2rem;
+  font-size: 20vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+blockquote {
+  position: relative;
+  margin: .2rem auto;
+  padding-block:  6rem;
+  padding-inline: calc(var(--padding-padrao) + 2rem);
+  background-color: var(--primary);
+  color: var(--text);
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+p {    
+  max-width: 52ch;
+  font-size: 1.2rem;
+  font-family: 'Merriweather', serif;
+  line-height: 1.75;
+}
+
+p:last-child{
+  margin-bottom: 6rem;
+}
+
+/* Estilos do rodapé */
+footer {
+  background-color: var(--accent);
+  margin-inline: var(--padding-padrao);
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: none;
+
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.footer-logo {
+  grid-column: 1 / 2;
+}
+
+.footer-logo img {
+  width: 200px;
+}
+
+.footer-links {
+  grid-column: 2 / 3;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-social {
+  grid-column: 3 / 4;
+}
+
+.footer-social ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-social li {
+  margin-right: 10px;
+}
