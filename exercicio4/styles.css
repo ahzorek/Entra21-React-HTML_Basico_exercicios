@@ -14,6 +14,18 @@
   scroll-behavior: smooth;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: rgb(237, 252, 238);
+    --background: rgb(6, 35, 7);
+    --primary: rgb(126, 226, 130);
+    --secondary: rgb(3, 7, 3);
+    --accent: rgb(157, 210, 159);
+    --bg: rgba(10, 57, 12, 0.25);
+
+  }
+}
+
 /* Estilos gerais */
 ::selection{
   color: var(--background);
@@ -195,8 +207,8 @@ blockquote {
   margin: .2rem auto;
   padding-block:  6rem;
   padding-inline: calc(var(--padding-padrao) + 2rem);
-  background-color: var(--primary);
-  color: var(--text);
+  background-color: var(--accent);
+  color: var(--background);
   text-align: center;
   font-size: 1.8rem;
 }
