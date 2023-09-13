@@ -1,10 +1,8 @@
 #!/bin/bash
-
 git add .
 
 git status
 
-# Solicita a confirmação do usuário para continuar com o commit
 echo "Continuar? (Digite 's' para continuar)"
 read resposta_commit
 
